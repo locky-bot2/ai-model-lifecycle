@@ -103,7 +103,7 @@ docker compose -f docker/docker-compose.yml up -d
 pytest -q
 ```
 
-Expected: **`73 passed`** (the number may grow) and **nothing skipped**.
+Expected: **`79 passed`** (the number may grow) and **nothing skipped**.
 
 | You see | Meaning | Fix |
 |---|---|---|
@@ -215,14 +215,24 @@ Do not change any code or files other than what these commands create.
 Do not read or print the .env file.
 ```
 
-To have the agent check whether a failure is the model's fault or a harness
-problem, ask it to re-run the scorer for that file and show the full error,
-for example:
+To check whether each failure is the model's fault or a harness problem, run:
+
+```bash
+python verify_failures.py --pair sonnet-5-vs-5.5 --repeat 3
+```
+
+It re-scores every failing run, shows the real error, and labels it `MODEL`
+(genuine model mistake), `HARNESS?` (setup problem), `FLAKY` (result changes on
+re-score) or `INFRA` (API call failed). Or ask the agent:
 
 ```text
-For each run in the "Failing runs" table, re-score it and show the real error
-message. Tell me whether it is a genuine model mistake or a test/harness problem.
+Run python verify_failures.py --pair sonnet-5-vs-5.5 --repeat 3 and summarize
+each failure: the model, the task, the real error, and whether it's a genuine
+model mistake.
 ```
+
+Agents get these rules and steps automatically from the repo's `gate1-eval`
+skill (`.claude/skills/gate1-eval/`); see its README for OpenClaw and opencode.
 
 ---
 
@@ -283,7 +293,7 @@ git push
 ```bash
 source .venv/bin/activate
 docker compose -f docker/docker-compose.yml up -d
-pytest -q                                              # 73 passed, 0 skipped
+pytest -q                                              # 79 passed, 0 skipped
 python report.py --list-runs                           # pairs and runs
 python runner.py --pair <pair> --repeats 3             # run
 python report.py --pair <pair>                         # scorecard → runs/<pair>/REPORT.md
