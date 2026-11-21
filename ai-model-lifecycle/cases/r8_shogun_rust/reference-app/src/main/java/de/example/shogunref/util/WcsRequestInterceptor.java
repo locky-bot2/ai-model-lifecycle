@@ -1,0 +1,33 @@
+package de.example.shogunref.util;
+
+import de.terrestris.shoguncore.util.interceptor.MutableHttpServletRequest;
+import de.terrestris.shoguncore.util.interceptor.WcsRequestInterceptorInterface;
+
+/**
+ * This class demonstrates how to implement the WcsRequestInterceptorInterface.
+ * 
+ * @author Daniel Koch
+ * @author terrestris GmbH & Co. KG
+ *
+ */
+public class WcsRequestInterceptor implements WcsRequestInterceptorInterface {
+
+	@Override
+	public MutableHttpServletRequest interceptGetCapabilities(
+			MutableHttpServletRequest request) {
+		return request;
+	}
+
+	@Override
+	public MutableHttpServletRequest interceptDescribeCoverage(
+			MutableHttpServletRequest request) {
+		return request;
+	}
+
+	@Override
+	public MutableHttpServletRequest interceptGetCoverage(
+			MutableHttpServletRequest request) {
+		return request;
+	}
+
+}

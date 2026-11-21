@@ -466,7 +466,10 @@ def test_real_case_sources_are_pinned_forks_and_not_committed():
     from cases import sources
 
     lock = sources._lock()
-    assert set(lock) == set(REAL.cases) | set(load_config(suite="real-screen").cases)
+    # r8 reuses r7's pinned shogun-core (its own files are the reference app,
+    # the schema and the prompt, committed): it has no sources of its own
+    reuses = {"r8_shogun_rust"}
+    assert set(lock) == (set(REAL.cases) | set(load_config(suite="real-screen").cases)) - reuses
     for case_id, srcs in lock.items():
         for s in srcs:
             assert s["repo"].startswith("https://github.com/abralock/")

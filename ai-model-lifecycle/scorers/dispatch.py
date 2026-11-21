@@ -25,6 +25,7 @@ SCORER_MAP: dict[str, str] = {
     "r1b_jhipster_boot3": "scorers.r1b_scorer",
     "r2_gwt_to_angular": "scorers.r2_scorer",
     "r7_shogun_hibernate6": "scorers.r7_scorer",
+    "r8_shogun_rust": "scorers.r8_scorer",
 }
 
 

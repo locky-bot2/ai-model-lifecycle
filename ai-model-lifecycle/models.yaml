@@ -262,6 +262,7 @@ suites:
     agentic_time_budgets_s: [900, 1800, 3600]
     cases:
       - r7_shogun_hibernate6
+      - r8_shogun_rust
 
 # --- Leaderboard policy (leaderboard.py; `--all-results` ignores it) ----------
 # Which results the team's leaderboard ranks. Only runs from the thinking-time

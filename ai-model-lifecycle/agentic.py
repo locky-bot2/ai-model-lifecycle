@@ -133,6 +133,8 @@ class AgenticCase:
     task_note: str                          # replaces the prompt's output-format section
     postgres: bool = False                  # start PostgreSQL in the sandbox
     exclude: list[str] = field(default_factory=list)   # globs never harvested
+    image: str | None = None                # sandbox image (None: IMAGE)
+    snapshots_s: list[int] = field(default_factory=list)  # harvest + score the work at these times
 
 
 def _copy(src: Path, dest: Path) -> None:
@@ -253,7 +255,7 @@ def r7_m2_cache() -> Path:
     return cache_dir() / R7_CASE / "m2"
 
 
-def _seed_r7_m2(m2: Path) -> None:
+def _seed_m2(m2: Path, label: str = "r7") -> None:
     # copy, never overwrite (-n): the volume is shared with other cases' runs;
     # as the agent user, so the sandbox can still write its own artifacts there
     r = subprocess.run(["docker", "run", "--rm", "--user", "agent", "--entrypoint", "sh",
@@ -262,7 +264,7 @@ def _seed_r7_m2(m2: Path) -> None:
                               "cp -Rn /seed/. /home/agent/.m2/repository/"],
                        capture_output=True, text=True)
     if r.returncode:
-        raise RuntimeError(f"r7: seeding the sandbox Maven volume failed: {r.stderr.strip()[:300]}")
+        raise RuntimeError(f"{label}: seeding the sandbox Maven volume failed: {r.stderr.strip()[:300]}")
 
 
 def _setup_r7(ws: Path) -> None:
@@ -273,8 +275,33 @@ def _setup_r7(ws: Path) -> None:
     # migrating them is part of the task (the grading tests stay with the scorer)
     for entry in (case_dir(R7_CASE) / "project").iterdir():
         _copy(entry, ws / entry.name)
-    _seed_r7_m2(m2)
+    _seed_m2(m2)
 
+
+R8_CASE = "r8_shogun_rust"
+R8_IMAGE = os.environ.get("GATE1_AGENT_RUST_IMAGE", "gate1-agent-rust:1.100.0")
+
+
+def _setup_r8(ws: Path) -> None:
+    """r8: the original shogun-core (r7's pinned snapshot) and the reference
+    webapp built on it, read-only references the agent may run; the pinned
+    schema; and the Maven repository the reference app runs from offline
+    (cases/r8_shogun_rust/setup.sh). The agent writes rust/."""
+    from scorers.base import cache_dir
+    m2 = cache_dir() / R8_CASE / "m2"
+    if not (m2.parent / "ready").is_file():
+        raise RuntimeError("r8 needs its Maven cache: run cases/r8_shogun_rust/setup.sh")
+    if subprocess.run(["docker", "image", "inspect", R8_IMAGE], capture_output=True).returncode:
+        raise RuntimeError(f"r8 needs the Rust sandbox image: docker build -t {R8_IMAGE} docker/agent-rust")
+    sources.ensure(R7_CASE)
+    for entry in (case_dir(R7_CASE) / "project").iterdir():
+        _copy(entry, ws / "reference" / "shogun-core" / entry.name)
+    _copy(case_dir(R8_CASE) / "reference-app", ws / "reference" / "reference-app")
+    _copy(case_dir(R8_CASE) / "schema.sql", ws / "schema.sql")
+    _seed_m2(m2, "r8")
+
+
+R8_SNAPSHOTS_S = [3600, 7200, 14400]      # r8 runs up to 8 h: progress at 1, 2 and 4 h
 
 _PG_NOTE = ("A PostgreSQL 17 server is running in this sandbox: `psql` connects to "
             "database aidb as user ai (PGHOST/PGUSER/PGPASSWORD/PGDATABASE are set).")
@@ -394,6 +421,34 @@ CASES: dict[str, AgenticCase] = {
                    "want to run the original build. Off-limits: shogun-core in any version "
                    "other than the one here (including its migrate-spring branch) and "
                    "terrestris/shogun, its successor."),
+    ),
+    "r8_shogun_rust": AgenticCase(
+        goal=("rust/ is a Cargo project whose `cargo build --release --locked` and `cargo test "
+              "--release --locked` pass; started with DATABASE_URL (a PostgreSQL database with "
+              "schema.sql loaded, unchanged) and PORT, its binary serves /rest/users, /rest/groups, "
+              "/rest/roles, /rest/layers, /rest/layerdatasources and /rest/layerappearances with "
+              "the same HTTP Basic login, permissions, status codes, JSON, field restriction "
+              "(output:only), filters and database writes as the original Java reference app in "
+              "reference/reference-app, without any Java involved."),
+        deliverables=["rust/**"],
+        exclude=["rust/target/**", "**/target/**"],
+        setup=_setup_r8,
+        postgres=True,
+        image=R8_IMAGE,
+        snapshots_s=R8_SNAPSHOTS_S,
+        task_note=("Write the Rust service in rust/ (create it). Rust 1.100.0 (cargo, rustc) is "
+                   "installed, and crates.io is reachable; nothing else on the internet is. "
+                   "reference/shogun-core/ is the original library (the module shogun-core-main) "
+                   "and reference/reference-app/ the webapp built on it (see its R8_PATCHES.md); "
+                   "schema.sql, in the current directory, is the database schema. You may run the "
+                   "original to compare: `createdb ref`, then in reference/reference-app "
+                   "`JAVA_HOME=/opt/java8 R8_JDBC_URL=jdbc:postgresql://localhost:5432/ref "
+                   "mvn -q -DskipTests jetty:run` (a minute or two to start; port 8081; its "
+                   "dependencies are in the local Maven repository, a few POMs come from Maven "
+                   "Central on the first start). On every start it "
+                   "recreates its schema in that database and loads demo data (users admin/shogun "
+                   "and user/shogun). Give your own service a separate database, for example "
+                   "`createdb port && psql -d port -f schema.sql`. " + _PG_NOTE),
     ),
 }
 
@@ -515,6 +570,8 @@ class AgenticResult:
     model_time_source: str | None = None     # "reported" (Claude Code) | "derived" (opencode)
     agent_error: str | None = None           # an agent error that ended the session (scored)
     network: str = NETWORK_ALLOWLIST         # allowlist | open (see NETWORK_*)
+    image: str | None = None                 # the sandbox image the attempt ran in
+    snapshots: list[dict] = field(default_factory=list)   # {at_s, passed, score, checks, reason}
     egress_hosts: list[str] = field(default_factory=list)    # hosts the proxy let through
     blocked_hosts: list[str] = field(default_factory=list)   # hosts the proxy refused
     final_message: str = ""
@@ -565,7 +622,8 @@ def _network_args(network: str) -> list[str]:
 
 
 def _docker_prefix(name: str, ws: Path, control: Path, postgres: bool,
-                   env_args: list[str], network: str = NETWORK_ALLOWLIST) -> list[str]:
+                   env_args: list[str], network: str = NETWORK_ALLOWLIST,
+                   image: str = IMAGE) -> list[str]:
     """`docker run` up to the image: the workspace and the read-only control
     dir are the first two mounts, then the dependency caches. `env_args` pass
     secrets by name only (`-e NAME`), so no value reaches a command line."""
@@ -575,17 +633,17 @@ def _docker_prefix(name: str, ws: Path, control: Path, postgres: bool,
             *env_args,
             *_network_args(network),
             "-e", f"GATE1_POSTGRES={1 if postgres else 0}",
-            "--shm-size", "1g", IMAGE]
+            "--shm-size", "1g", image]
 
 
 def docker_command(name: str, ws: Path, control: Path, model: str,
                    effort: str | None, postgres: bool,
-                   network: str = NETWORK_ALLOWLIST) -> list[str]:
+                   network: str = NETWORK_ALLOWLIST, image: str = IMAGE) -> list[str]:
     cmd = _docker_prefix(name, ws, control, postgres,
                          ["-e", TOKEN_ENV,     # by name: the value comes from our env
                           # no telemetry or update checks: the proxy would refuse them
                           "-e", "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1"],
-                         network) + [
+                         network, image) + [
            # the prompt (`/goal ...`) arrives on stdin, the task in a file
            "sh", "-c", 'exec claude -p "$@" < /gate1/prompt.txt', "claude",
            "--model", model,
@@ -822,11 +880,12 @@ def write_opencode_control(control: Path, goal: str, system: str, model_id: str,
 
 
 def opencode_command(name: str, ws: Path, control: Path, model_id: str,
-                     postgres: bool, network: str = NETWORK_ALLOWLIST) -> list[str]:
+                     postgres: bool, network: str = NETWORK_ALLOWLIST,
+                     image: str = IMAGE) -> list[str]:
     env_args = ["-e", OPENCODE_KEY_ENV]          # by name: the value comes from our env
     for k, v in OPENCODE_ENV_FLAGS.items():
         env_args += ["-e", f"{k}={v}"]
-    return _docker_prefix(name, ws, control, postgres, env_args, network) + [
+    return _docker_prefix(name, ws, control, postgres, env_args, network, image) + [
         "sh", "-c", 'exec opencode run "$@" < /gate1/prompt.txt', "opencode",
         "--standalone", "--format", "json", "--auto", "--thinking",
         "--title", "gate1", "--model", f"{OPENCODE_PROVIDER}/{model_id}"]
@@ -1017,8 +1076,8 @@ class ClaudeCodeBackend:
 
     def command(self, name: str, ws: Path, control: Path, model_id: str,
                 effort: str | None, postgres: bool,
-                network: str = NETWORK_ALLOWLIST) -> list[str]:
-        return docker_command(name, ws, control, model_id, effort, postgres, network)
+                network: str = NETWORK_ALLOWLIST, image: str = IMAGE) -> list[str]:
+        return docker_command(name, ws, control, model_id, effort, postgres, network, image)
 
     def env(self) -> dict[str, str]:
         return _container_env()
@@ -1060,8 +1119,8 @@ class OpencodeBackend:
 
     def command(self, name: str, ws: Path, control: Path, model_id: str,
                 effort: str | None, postgres: bool,
-                network: str = NETWORK_ALLOWLIST) -> list[str]:
-        return opencode_command(name, ws, control, model_id, postgres, network)
+                network: str = NETWORK_ALLOWLIST, image: str = IMAGE) -> list[str]:
+        return opencode_command(name, ws, control, model_id, postgres, network, image)
 
     def env(self) -> dict[str, str]:
         return _opencode_env()
@@ -1201,7 +1260,9 @@ def run_attempt(cfg, pair_id: str, role: str, model, case_id: str, rep: int, run
         backend.write_control(control, spec.goal,
                               system + "\n\n# The task\n\n" + task_prompt(case_id),
                               model.id, effort)
-        cmd = backend.command(name, ws, control, model.id, effort, spec.postgres, network)
+        res.image = spec.image or IMAGE
+        cmd = backend.command(name, ws, control, model.id, effort, spec.postgres, network,
+                              image=res.image)
         env = backend.env()
         started_at = time.time()
         # a key the agent prints (e.g. by running `env`) never reaches runs/
@@ -1221,6 +1282,19 @@ def run_attempt(cfg, pair_id: str, role: str, model, case_id: str, rep: int, run
 
             reader = threading.Thread(target=pump, daemon=True)
             reader.start()
+            # long cases: harvest the work in progress at fixed times, to score
+            # it after the session (a progress curve, not only the end state)
+            snaps: list[tuple[int, str]] = []
+
+            def take(at_s: int) -> None:
+                try:
+                    snaps.append((at_s, answer_from(before, snapshot(ws, spec), spec.deliverables)))
+                except Exception:                   # noqa: BLE001 — a snapshot never stops a run
+                    pass
+            timers = [threading.Timer(t, take, args=(t,)) for t in spec.snapshots_s if t < time_limit_s]
+            for tm in timers:
+                tm.daemon = True
+                tm.start()
             session: list[str] = []
             try:
                 proc.wait(timeout=time_limit_s)
@@ -1233,6 +1307,9 @@ def run_attempt(cfg, pair_id: str, role: str, model, case_id: str, rep: int, run
                         session = []
                 subprocess.run(["docker", "kill", name], capture_output=True)
                 proc.wait(timeout=60)
+            finally:
+                for tm in timers:
+                    tm.cancel()
             reader.join(timeout=30)
         res.latency_s = round(time.monotonic() - t0, 2)
         if network == NETWORK_ALLOWLIST:
@@ -1260,6 +1337,14 @@ def run_attempt(cfg, pair_id: str, role: str, model, case_id: str, rep: int, run
             from scorers.dispatch import score_case
             scored = (scorer or score_case)(case_id, res.output_text, model.id)
             res.passed, res.reason, res.checks = bool(scored.passed), scored.reason, dict(scored.checks)
+            for at_s, text in sorted(snaps):
+                if not text.strip():
+                    res.snapshots.append({"at_s": at_s, "passed": False, "score": 0.0,
+                                          "checks": {}, "reason": "nothing delivered yet"})
+                    continue
+                s = (scorer or score_case)(case_id, text, model.id)
+                res.snapshots.append({"at_s": at_s, "passed": bool(s.passed), "score": s.score,
+                                      "checks": dict(s.checks), "reason": s.reason})
     except Exception as exc:                        # noqa: BLE001 — recorded, never crashes a batch
         res.error = res.error or f"{type(exc).__name__}: {exc}"
         res.ok = False

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:tx="http://www.springframework.org/schema/tx"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans.xsd
+                        http://www.springframework.org/schema/tx
+                        http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+    <!-- (Optionally) define a prefix for table names -->
+    <bean id="tablePrefix" class="java.lang.String">
+        <constructor-arg value="${ddl.tablePrefix}" />
+    </bean>
+
+    <!-- HIKARI CP config-->
+    <bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
+        <property name="connectionTestQuery" value="${hikari.testQuery}" />
+        <property name="maximumPoolSize" value="${hikari.maximumPoolSize}" />
+        <property name="dataSourceClassName" value="${hikari.dataSourceClassName}"/>
+        <property name="dataSourceProperties">
+            <props>
+                <prop key="url">${jdbc.url}</prop>
+                <prop key="user">${jdbc.username}</prop>
+                <prop key="password">${jdbc.password}</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="shogunCoreDataSource" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
+        <constructor-arg ref="hikariConfig"/>
+    </bean>
+
+    <bean id="sessionFactory"
+        class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+        <property name="dataSource" ref="shogunCoreDataSource" />
+        <property name="packagesToScan" value="de.terrestris.*.model, de.example.shogunref.model" />
+        <property name="implicitNamingStrategy">
+            <bean class="de.terrestris.shoguncore.util.naming.ImplicitNamingStrategyShogunCore" />
+        </property>
+        <property name="physicalNamingStrategy">
+            <bean class="de.terrestris.shoguncore.util.naming.PhysicalNamingStrategyShogunCore" />
+        </property>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">${hibernate.dialect}</prop>
+                <prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
+                <prop key="hibernate.id.new_generator_mappings">${hibernate.id.new_generator_mappings}</prop>
+                <prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}</prop>
+                <prop key="hibernate.cache.use_query_cache">${hibernate.cache.use_query_cache}</prop>
+                <!-- r8: off, so rows the tests write with SQL are what every request sees -->
+                <prop key="hibernate.cache.use_second_level_cache">${hibernate.cache.use_second_level_cache}</prop>
+                <prop key="hibernate.cache.region.factory_class">org.hibernate.cache.jcache.JCacheRegionFactory</prop>
+                <prop key="org.hibernate.cache.ehcache.configurationResourceName">/ehcache.xml</prop>
+                <prop key="hibernate.generate_statistics">${hibernate.cache.statistics}</prop>
+                <prop key="hibernate.cache.use_reference_entries">true</prop>
+                <prop key="hibernate.cache.use_structured_entries">true</prop>
+                <prop key="hibernate.javax.cache.missing_cache_strategy">create</prop>
+            </props>
+        </property>
+    </bean>
+
+    <tx:annotation-driven transaction-manager="transactionManager" />
+
+    <bean id="transactionManager"
+        class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+
+</beans>

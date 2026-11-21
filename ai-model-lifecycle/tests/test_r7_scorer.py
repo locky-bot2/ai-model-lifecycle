@@ -46,7 +46,7 @@ class ATest { @Test void works() { assertEquals(1, 1); } }
 # --------------------------------------------------------------------------- #
 def test_r7_is_registered_on_the_screening_suite_only():
     assert SCORER_MAP[CASE] == "scorers.r7_scorer"
-    assert load_config(suite="real-screen").cases == [CASE]
+    assert CASE in load_config(suite="real-screen").cases
     assert CASE not in load_config(suite="real").cases          # not on the main board yet
     spec = agentic.CASES[CASE]
     assert spec.deliverables == ["pom.xml", f"{MODULE}/pom.xml", f"{MODULE}/src/**"]
@@ -84,7 +84,7 @@ def test_r7_setup_copies_the_project_with_its_junit4_tests_and_seeds_maven(tmp_p
     (m2 / "org" / "geotools" / "gt-main" / "22.2").mkdir(parents=True)
     seeded = []
     monkeypatch.setattr(agentic, "r7_m2_cache", lambda: m2)
-    monkeypatch.setattr(agentic, "_seed_r7_m2", seeded.append)
+    monkeypatch.setattr(agentic, "_seed_m2", lambda m, label="r7": seeded.append(m))
     ws = tmp_path / "ws"
     agentic._setup_r7(ws)
     assert seeded == [m2]

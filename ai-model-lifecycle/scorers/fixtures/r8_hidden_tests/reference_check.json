@@ -1,0 +1,3926 @@
+{
+ "total": 490,
+ "passed": 490,
+ "results": [
+  {
+   "id": "perm-acct-carol-perm-on-dave-via-group",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-acct-alice-owner-unreadable",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-acct-alice-members-ids",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-acct-alice-members-unreadable-user",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-acct-alice-joined-then-reads",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-acct-carol-list-users",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-acct-carol-deletes-dave",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-acct-carol-reads-dave",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-acct-bob-groups-on-carol-read-only",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-acct-carol-password",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-acct-carol-roles-editor",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-acct-carol-groups-both",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-acct-carol-groups-unreadable",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-acct-carol-groups-granted",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-acct-carol-groups-member",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-acct-carol-activate",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-acct-carol-name",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-acct-alice-account-name",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-acct-alice-active-false",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-acct-alice-roles-admin",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-acct-alice-groups-missing",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-acct-alice-groups-none",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-acct-alice-groups-objects",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-acct-alice-groups-mixed",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-acct-alice-groups-unreadable",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-acct-alice-groups-own",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-acct-alice-name",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "query2-filter-as-carol",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "query2-only-filter-subtype",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "query2-only-on-sub-path",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "query2-only-on-get-by-id",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "query2-only-nested",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "query2-only-subtype",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "query2-only-spaces",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "query2-only-repeated",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "query2-mixed-known-unknown",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "query2-null-word",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "query2-date-field",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "query2-relation-owner",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "query2-relation-field",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "query2-empty-value",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "query2-plus-space",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "query2-encoded-value",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "query2-encoded-key",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "query2-subtype-field-wfs",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "query2-subtype-field",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "query2-number-int",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "query2-number-bad",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "query2-id-bad",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "query2-ids",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "query2-bool-bad",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "query2-bool-upper",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "query2-bool-1",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "query2-bool-yes",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "path-delete-hex",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "path-put-hex",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "path-patch",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "path-post-id",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "path-delete-list",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "path-put-list",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "path-users-groups-bad-id",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "path-groups-users-missing",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "path-users-groups-missing",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "path-case-path",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "path-filter-id",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "path-unknown-resource",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "path-users-users",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "path-groups-userGroups",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "path-sub-unknown",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "path-sub-trailing-slash",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "path-list-trailing-slash",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "path-space",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "path-negative",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "path-too-big",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "path-decimal",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "path-double-slash",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "path-trailing-slash",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "path-leading-zero",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "path-plus",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "path-hex",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "delete-user-owner-of-group",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "delete-twice",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "delete-appearance-then-layer",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "delete-group-with-perms",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "delete-user-with-perms",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "delete-layer-perms",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "delete-two-map-layers",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "delete-layer-map-41",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "delete-layer-map-43",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "delete-layer-map-42",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "delete-layer-map-40",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-rel-after-admin-role",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-rel-after-group-join",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-rel-after-grant-removed",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-read2-dave-inactive-get",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-read2-alice-only-users",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-read2-bob-filter-layers",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-read2-carol-filter-groups",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-read2-alice-filter-users",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-read2-bob-group-users-empty",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-read2-alice-user-groups-bob",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-read2-bob-user-groups-carol",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-read2-carol-group-users-own",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-read2-carol-group-users",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-rel-bob-delete-group-of-his",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-rel-alice-delete-appearance",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-rel-alice-delete-self",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-rel-alice-delete-role",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-rel-bob-delete-admin-layer",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-rel-alice-delete-group",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-rel-bob-group-editors",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-rel-alice-appearance-update",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-rel-alice-source-update",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-rel-carol-layer-appearance",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-rel-bob-layer-appearance",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-rel-alice-layer-appearance",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-rel-carol-group-viewers",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-rel-carol-self-name",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-rel-carol-self-groups",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-rel-bob-admin-user",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-rel-bob-read-only-user",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-rel-bob-self-roles-admin",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-rel-bob-self-groups",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-rel-alice-other-name",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-rel-alice-other-groups",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-rel-alice-self-roles-admin",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-rel-alice-self-groups-drop",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-rel-alice-self-groups",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-rel-alice-group-owner",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-rel-alice-group-roles",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "account-self-password",
+   "category": "auth",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "account-delete-then-login",
+   "category": "auth",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "account-password-not-shown",
+   "category": "auth",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "account-lose-role",
+   "category": "auth",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "account-reactivate",
+   "category": "auth",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "account-rename",
+   "category": "auth",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "account-deactivate",
+   "category": "auth",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "account-password-change",
+   "category": "auth",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "account-create-inactive-login",
+   "category": "auth",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "account-create-then-login",
+   "category": "auth",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "rel-create-appearance-props",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "rel-create-user-roles-groups",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "rel-create-group-roles",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "rel-create-group-members-owner",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "rel-create-layer-appearance",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "rel-update-group-roles",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "rel-update-group-owner-null",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "rel-update-group-owner",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "rel-update-group-members-empty",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "rel-update-group-members",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "rel-update-user-groups-empty",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "rel-update-user-groups",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "rel-update-user-roles-empty",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "rel-update-user-roles",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "rel-update-source-id-mismatch",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "rel-update-source-type-change",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "rel-update-xyz-extent",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "rel-update-tilegrid-inline",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "rel-update-tilegrid-null",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "rel-update-wmts-tilegrid",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "rel-update-tilewms-tilegrid",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "rel-update-layer-source-null",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "rel-update-layer-appearance-missing",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "rel-update-layer-appearance-inline",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "rel-update-layer-appearance-null",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "rel-update-layer-appearance",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "seq-mixed-types",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "seq-after-denied-create",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "seq-after-refused-source",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "seq-after-missing-group",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "seq-after-bad-create",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "loose-update-layer-empty-body",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "loose-update-layer-array-body",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "loose-update-layer-name-null",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "loose-update-role-description-null",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "loose-update-role-unknown-field",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "loose-update-role-id-float",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "loose-update-role-id-string",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "loose-update-user-email-number",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "loose-update-user-birthday-null",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "loose-update-user-birthday-epoch",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "loose-update-source-urls-duplicate",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "loose-update-source-urls-null",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "loose-update-source-width-float",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "loose-update-source-width-string",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "loose-update-source-null-and-empty",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "loose-update-appearance-props-empty",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "loose-update-appearance-props-number",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "loose-update-appearance-props-null",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "loose-update-appearance-visible-int",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "loose-update-appearance-opacity-bad",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "loose-update-appearance-opacity-string",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "loose-create-role-empty-string-body",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "loose-create-role-null-body",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "loose-create-role-empty-body",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "loose-create-role-array-body",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "loose-create-role-name-list",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "loose-create-role-name-object",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "loose-create-role-name-bool",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "loose-create-role-name-number",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "loose-create-role-id-string",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "loose-create-role-id-null",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "loose-create-role-id-empty",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "loose-create-user-name-number",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "loose-create-user-role-missing",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "loose-create-user-group-missing",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "loose-create-user-role-ref-other-name",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "loose-create-user-groups-duplicate",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "loose-create-user-groups-null-entry",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "loose-create-user-roles-null-entry",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "loose-create-user-language-dash",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "loose-create-user-birthday-bad",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "loose-create-user-birthday-epoch",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "loose-create-user-birthday-short",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "loose-create-user-active-null",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "loose-create-user-active-string",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "filter-users-only-id",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "filter-appearance-opacity",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "filter-appearance-visible",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "filter-sources-name-two",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "filter-sources-url",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "filter-sources-type",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "filter-layers-description",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "filter-layers-name-as-bob",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "filter-layers-name-as-alice",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "filter-layers-name",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "filter-groups-name",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "filter-user-two-values",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "filter-user-language",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "filter-user-boolean",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "filter-user-account",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "filter-with-only-no-id",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "filter-with-only",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "filter-and-two-fields-no-match",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "filter-and-two-fields",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "filter-no-match",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "filter-no-params",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "filter-unknown-field",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "filter-value-case-sensitive",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "filter-case-insensitive-key",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "filter-or-same-field",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "filter-role-name",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "only-other-params-ignored",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "only-users-as-bob",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "only-as-user",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "only-relation-layers",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "only-relation",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "only-empty",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "only-unknown-field",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "only-case-insensitive-field",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "only-case-insensitive-key",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "only-id-alone",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "only-layerappearances-without-id",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "only-layerappearances-with-id",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "only-layerdatasources-without-id",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "only-layerdatasources-with-id",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "only-layers-without-id",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "only-layers-with-id",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "only-groups-without-id",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "only-groups-with-id",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "only-users-without-id",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "only-users-with-id",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "only-roles-without-id",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "only-roles-with-id",
+   "category": "queries",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-admin-deletes-secret",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-admin-reads-secret",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-group-users-carol",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-user-groups-carol",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-update-self-carol",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-update-group-20-carol",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-read-group-22-carol",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-read-group-21-carol",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-read-group-20-carol",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-read-user-14-carol",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-read-user-13-carol",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-read-user-12-carol",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-read-user-11-carol",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-read-user-10-carol",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-delete-source-carol",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-update-role-carol",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-create-role-carol",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-create-layer-carol",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-delete-layer-44-carol",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-update-layer-44-carol",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-read-layer-44-carol",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-delete-layer-43-carol",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-update-layer-43-carol",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-read-layer-43-carol",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-delete-layer-42-carol",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-update-layer-42-carol",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-read-layer-42-carol",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-delete-layer-41-carol",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-update-layer-41-carol",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-read-layer-41-carol",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-delete-layer-40-carol",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-update-layer-40-carol",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-read-layer-40-carol",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-list-layerappearances-carol",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-list-layerdatasources-carol",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-list-layers-carol",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-list-roles-carol",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-list-groups-carol",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-list-users-carol",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-group-users-bob",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-user-groups-bob",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-update-self-bob",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-update-group-20-bob",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-read-group-22-bob",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-read-group-21-bob",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-read-group-20-bob",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-read-user-14-bob",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-read-user-13-bob",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-read-user-12-bob",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-read-user-11-bob",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-read-user-10-bob",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-delete-source-bob",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-update-role-bob",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-create-role-bob",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-create-layer-bob",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-delete-layer-44-bob",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-update-layer-44-bob",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-read-layer-44-bob",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-delete-layer-43-bob",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-update-layer-43-bob",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-read-layer-43-bob",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-delete-layer-42-bob",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-update-layer-42-bob",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-read-layer-42-bob",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-delete-layer-41-bob",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-update-layer-41-bob",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-read-layer-41-bob",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-delete-layer-40-bob",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-update-layer-40-bob",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-read-layer-40-bob",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-list-layerappearances-bob",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-list-layerdatasources-bob",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-list-layers-bob",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-list-roles-bob",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-list-groups-bob",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-list-users-bob",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-group-users-alice",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-user-groups-alice",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-update-self-alice",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-update-group-20-alice",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-read-group-22-alice",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-read-group-21-alice",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-read-group-20-alice",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-read-user-14-alice",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-read-user-13-alice",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-read-user-12-alice",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-read-user-11-alice",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-read-user-10-alice",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-delete-source-alice",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-update-role-alice",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-create-role-alice",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-create-layer-alice",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-delete-layer-44-alice",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-update-layer-44-alice",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-read-layer-44-alice",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-delete-layer-43-alice",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-update-layer-43-alice",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-read-layer-43-alice",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-delete-layer-42-alice",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-update-layer-42-alice",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-read-layer-42-alice",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-delete-layer-41-alice",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-update-layer-41-alice",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-read-layer-41-alice",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-delete-layer-40-alice",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-update-layer-40-alice",
+   "category": "permissions",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-read-layer-40-alice",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-list-layerappearances-alice",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-list-layerdatasources-alice",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-list-layers-alice",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-list-roles-alice",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-list-groups-alice",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "perm-list-users-alice",
+   "category": "permissions",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "delete-source-unused",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "delete-source-in-use",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "update-source-xyz",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "update-source-wmts-urls",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "update-source-wfs",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "update-source-tilewms",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "create-source-no-type",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "create-source-refused",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "delete-appearance-in-use",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "delete-appearance-unused",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "update-appearance-properties",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "update-appearance",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "create-appearance",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "delete-layer",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "update-layer-source-ref",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "update-layer",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "create-layer-with-source",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "create-layer",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "delete-group",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "update-group-name",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "create-group",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "delete-user",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "update-user-birthday",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "update-user-active",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "update-user",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "create-user",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "delete-missing-role",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "delete-role-in-use",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "delete-unused-role",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "update-role-bad-json",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "update-role-missing",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "update-role-no-id",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "update-role-id-mismatch",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "update-role-name",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "update-role",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "create-role-unknown-field",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "create-role-bad-json",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "create-role-with-id",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "create-two-roles",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "create-role-minimal",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "create-role",
+   "category": "crud",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "read-group-users-empty",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "read-group-users-editors",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "read-user-groups-none",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "read-user-groups-carol",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "read-user-groups-alice",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "read-nonnumeric-id",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "read-missing-layerappearances",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "read-layerappearances-82",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "read-layerappearances-81",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "read-layerappearances-80",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "read-list-layerappearances",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "read-missing-layerdatasources",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "read-layerdatasources-54",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "read-layerdatasources-53",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "read-layerdatasources-52",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "read-layerdatasources-51",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "read-layerdatasources-50",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "read-list-layerdatasources",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "read-missing-layers",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "read-layers-44",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "read-layers-43",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "read-layers-42",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "read-layers-41",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "read-layers-40",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "read-list-layers",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "read-missing-roles",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "read-roles-4",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "read-roles-3",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "read-roles-2",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "read-roles-1",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "read-list-roles",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "read-missing-groups",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "read-groups-22",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "read-groups-21",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "read-groups-20",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "read-list-groups",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "read-missing-users",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "read-users-14",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "read-users-13",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "read-users-12",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "read-users-11",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "read-users-10",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "read-list-users",
+   "category": "crud",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "auth-none-delete",
+   "category": "auth",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "auth-none-post",
+   "category": "auth",
+   "has_db": true,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "auth-none-by-id",
+   "category": "auth",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "auth-ok-then-wrong",
+   "category": "auth",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "auth-account-name-case",
+   "category": "auth",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "auth-ok-alice-layerappearances",
+   "category": "auth",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "auth-ok-alice-layerdatasources",
+   "category": "auth",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "auth-ok-alice-layers",
+   "category": "auth",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "auth-ok-alice-roles",
+   "category": "auth",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "auth-ok-alice-groups",
+   "category": "auth",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "auth-ok-alice-users",
+   "category": "auth",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "auth-ok-carol",
+   "category": "auth",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "auth-ok-bob",
+   "category": "auth",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "auth-ok-admin",
+   "category": "auth",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "auth-ok-user",
+   "category": "auth",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "auth-unknown-user",
+   "category": "auth",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "auth-inactive",
+   "category": "auth",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "auth-wrongpw-layerappearances",
+   "category": "auth",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "auth-none-layerappearances",
+   "category": "auth",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "auth-wrongpw-layerdatasources",
+   "category": "auth",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "auth-none-layerdatasources",
+   "category": "auth",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "auth-wrongpw-layers",
+   "category": "auth",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "auth-none-layers",
+   "category": "auth",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "auth-wrongpw-roles",
+   "category": "auth",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "auth-none-roles",
+   "category": "auth",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "auth-wrongpw-groups",
+   "category": "auth",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "auth-none-groups",
+   "category": "auth",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "auth-wrongpw-users",
+   "category": "auth",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  },
+  {
+   "id": "auth-none-users",
+   "category": "auth",
+   "has_db": false,
+   "http": null,
+   "db": null,
+   "passed": true
+  }
+ ]
+}

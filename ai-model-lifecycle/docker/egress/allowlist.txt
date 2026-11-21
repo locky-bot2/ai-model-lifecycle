@@ -9,3 +9,5 @@
 ^nodejs\.org$
 ^download\.cypress\.io$
 ^cdn\.cypress\.io$
+^index\.crates\.io$
+^static\.crates\.io$
